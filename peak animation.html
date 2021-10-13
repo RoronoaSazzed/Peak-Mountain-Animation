@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <title>Peak Animation</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .parentDiv {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+      }
+
+      .textGroup {
+        transform: scale(0);
+        transition: 300ms;
+      }
+
+      #dot-1,
+      #dot-2,
+      #dot-3,
+      #dot-4,
+      #dot-5 {
+        transform-box: fill-box;
+        transform-origin: center;
+        transform: scale(0);
+        transition: 300ms;
+      }
+
+      #sub-title-1,
+      #sub-title-2,
+      #sub-title-3,
+      #sub-title-4,
+      #sub-title-5 {
+        transition: 300ms;
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      #title-1,
+      #title-2,
+      #title-3,
+      #title-4,
+      #title-5 {
+        opacity: 0;
+        transition: 300ms;
+        pointer-events: none;
+      }
+
+      #dot-1 {
+        animation: megannimationDot1 16s linear forwards;
+      }
+
+      #dot-2 {
+        animation: megannimationDot2 16s linear forwards;
+      }
+
+      #dot-3 {
+        animation: megannimationDot3 16s linear forwards;
+      }
+
+      #dot-4 {
+        animation: megannimationDot4 16s linear forwards;
+      }
+
+      #dot-5 {
+        animation: megannimationDot5 16s linear forwards;
+      }
+
+      #title-1 {
+        animation: megannimationTitle1 16s linear forwards;
+      }
+
+      #title-2 {
+        animation: megannimationTitle2 16s linear forwards;
+      }
+
+      #title-3 {
+        animation: megannimationTitle3 16s linear forwards;
+      }
+
+      #title-4 {
+        animation: megannimationTitle4 16s linear forwards;
+      }
+
+      #title-5 {
+        animation: megannimationTitle5 16s linear forwards;
+      }
+
+      #c-bottom-1,
+      #c-bottom-2,
+      #c-bottom-3,
+      #c-bottom-4,
+      #c-bottom-5 {
+        transform-box: fill-box;
+        transform-origin: center;
+        animation: pulsate 1.5s ease-in-out infinite forwards;
+      }
+
+      @keyframes pulsate {
+        0% {
+          transform: scale(1);
+          opacity: 1;
+        }
+
+        100% {
+          transform: scale(2);
+          opacity: 0;
+        }
+      }
+
+      #linear-dot {
+        clip-path: polygon(0 0, 0% 0%, 0% 100%, 0% 100%);
+        animation: megannimationDashedLine 16s linear forwards;
+      }
+
+      /* Dot Ball Animation */
+
+      @keyframes megannimationDashedLine {
+        0% {
+          clip-path: polygon(0 0, 0% 0%, 0% 100%, 0% 100%);
+        }
+
+        9% {
+          clip-path: polygon(0 0, 14% 0%, 14% 100%, 0% 100%);
+        }
+
+        18% {
+          clip-path: polygon(0 0, 14% 0%, 14% 100%, 0% 100%);
+        }
+
+        27% {
+          clip-path: polygon(0 0, 29.15% 0%, 29.15% 100%, 0% 100%);
+        }
+
+        36% {
+          clip-path: polygon(0 0, 29.15% 0%, 29.15% 100%, 0% 100%);
+        }
+
+        45% {
+          clip-path: polygon(0 0, 45.39% 0%, 45.39% 100%, 0% 100%);
+        }
+
+        54% {
+          clip-path: polygon(0 0, 45.39% 0%, 45.39% 100%, 0% 100%);
+        }
+
+        63% {
+          clip-path: polygon(0 0, 60.39% 0%, 60.39% 100%, 0% 100%);
+        }
+
+        72% {
+          clip-path: polygon(0 0, 60.39% 0%, 60.39% 100%, 0% 100%);
+        }
+
+        81% {
+          clip-path: polygon(0 0, 74.7% 0%, 74.7% 100%, 0% 100%);
+        }
+
+        90% {
+          clip-path: polygon(0 0, 74.7% 0%, 74.7% 100%, 0% 100%);
+        }
+
+        99% {
+          clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+        }
+        100% {
+          clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+        }
+      }
+
+      @keyframes megannimationDot1 {
+        0%,
+        10% {
+          transform: scale(0);
+        }
+
+        11%,
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      @keyframes megannimationDot2 {
+        0%,
+        30% {
+          transform: scale(0);
+        }
+
+        31%,
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      @keyframes megannimationDot3 {
+        0%,
+        50% {
+          transform: scale(0);
+        }
+
+        51%,
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      @keyframes megannimationDot4 {
+        0%,
+        70% {
+          transform: scale(0);
+        }
+
+        71%,
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      @keyframes megannimationDot5 {
+        0%,
+        90% {
+          transform: scale(0);
+        }
+
+        91%,
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      /* Title Animation */
+
+      @keyframes megannimationTitle1 {
+        0%,
+        10% {
+          opacity: 0;
+        }
+
+        11%,
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @keyframes megannimationTitle2 {
+        0%,
+        30% {
+          opacity: 0;
+        }
+
+        31%,
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @keyframes megannimationTitle3 {
+        0%,
+        50% {
+          opacity: 0;
+        }
+
+        51%,
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @keyframes megannimationTitle4 {
+        0%,
+        70% {
+          opacity: 0;
+        }
+
+        71%,
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @keyframes megannimationTitle5 {
+        0%,
+        90% {
+          opacity: 0;
+        }
+
+        91%,
+        100% {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parentDiv">
+      <svg
+        width="100%"
+        min-height="0"
+        viewBox="0 0 1730 888"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g id="Peak SVG">
+          <g id="linear-dot">
+            <path
+              id="Vector 1"
+              d="M32 796.5L263 602L401 669L513 521L588 650L780 398.5L899 506L1028 337L1082 378.5L1264 133.5L1634 742.5L1681.5 783"
+              stroke="#E2E0DC"
+              stroke-width="3"
+              stroke-dasharray="9 9"
+            />
+          </g>
+          <g id="dot-1">
+            <g id="c-bottom-1">
+              <circle
+                id="Ellipse 2"
+                opacity="0.5"
+                cx="262.5"
+                cy="602.5"
+                r="25.5"
+                fill="#E2E0DC"
+              />
+            </g>
+            <g id="c-top-1">
+              <circle
+                id="Ellipse 1"
+                cx="262.5"
+                cy="602.5"
+                r="18.6346"
+                fill="#222629"
+              />
+            </g>
+          </g>
+          <g id="dot-2">
+            <g id="c-bottom-2">
+              <circle
+                id="Ellipse 2_2"
+                opacity="0.5"
+                cx="513"
+                cy="521"
+                r="26"
+                fill="#E2E0DC"
+              />
+            </g>
+            <g id="c-top-2">
+              <circle
+                id="Ellipse 1_2"
+                cx="513"
+                cy="521"
+                r="19"
+                fill="#A77847"
+              />
+            </g>
+          </g>
+          <g id="dot-3">
+            <g id="c-bottom-3">
+              <circle
+                id="Ellipse 2_3"
+                opacity="0.5"
+                cx="780.5"
+                cy="399.5"
+                r="25.5"
+                fill="#E2E0DC"
+              />
+            </g>
+            <g id="c-top-3">
+              <circle
+                id="Ellipse 1_3"
+                cx="780.5"
+                cy="399.5"
+                r="18.6346"
+                fill="#DFC479"
+              />
+            </g>
+          </g>
+          <g id="dot-4">
+            <g id="c-bottom-4">
+              <circle
+                id="Ellipse 2_4"
+                opacity="0.5"
+                cx="1027.5"
+                cy="336.5"
+                r="25.5"
+                fill="#E2E0DC"
+              />
+            </g>
+            <g id="c-top-4">
+              <circle
+                id="Ellipse 1_4"
+                cx="1027.5"
+                cy="336.5"
+                r="18.6346"
+                fill="#604F1F"
+              />
+            </g>
+          </g>
+          <g id="dot-5">
+            <g id="c-bottom-5">
+              <circle
+                id="Ellipse 2_5"
+                opacity="0.5"
+                cx="1264.5"
+                cy="133.5"
+                r="25.5"
+                fill="#E2E0DC"
+              />
+            </g>
+            <g id="c-top-5">
+              <circle
+                id="Ellipse 1_5"
+                cx="1264.5"
+                cy="133.5"
+                r="18.6346"
+                fill="#999C6F"
+              />
+            </g>
+          </g>
+          <g id="mountain">
+            <path
+              id="Vector 2"
+              d="M263 656L34 848.5L263 821L410.5 860L512.5 775.5L588 853L706.5 760L662.5 708L617.5 764L512.5 581.5L410.5 721.5L263 656Z"
+              fill="#A77847"
+            />
+            <path
+              id="Vector 4"
+              d="M368 778L263 656L410 722L368 778Z"
+              fill="#92673B"
+            />
+            <path
+              id="Vector 3"
+              d="M568.5 825L512.5 582L618 764.5L568.5 825Z"
+              fill="#92673B"
+            />
+            <path
+              id="Vector 5"
+              d="M781 461L588 712.5L617 765.5L662 709L706 760.5L780.5 701.5L903 769L1028 664L1081.5 688.5L1264 541.5L1411 686L1441 654L1610 763L1264 197L1080 439L1028 398L899 569L781 461Z"
+              fill="#999C6F"
+            />
+            <path
+              id="Vector 6"
+              d="M830 660L780.5 460L900 568L830 660Z"
+              fill="#878A5C"
+            />
+            <path
+              id="Vector 7"
+              d="M1061.5 473L1028 398L1081.5 439.5L1061.5 473Z"
+              fill="#878A5D"
+            />
+            <path
+              id="Vector 8"
+              d="M830.5 660.5L1027.5 398.5L1061 473.5L830.5 660.5Z"
+              fill="#939669"
+            />
+            <path
+              id="Vector 9"
+              d="M1038.5 669L1263.5 196L1252 552L1236 565L1196.5 519.5L1114 662.5L1081 689L1038.5 669Z"
+              fill="#878A5C"
+            />
+            <path
+              id="Vector 10"
+              d="M1439 652.5L1265 196L1252 552L1265 542L1410.5 686.5L1439 652.5Z"
+              fill="#7C7F52"
+            />
+            <path
+              id="Vector 11"
+              d="M1610 763L1265 195L1439 652L1610 763Z"
+              fill="#777A4D"
+            />
+            <path
+              id="Vector 12"
+              d="M1114.5 662L1196.5 519L1236 565L1114.5 662Z"
+              fill="#DFC479"
+            />
+            <path
+              id="Vector 13"
+              d="M1439 653L1410.5 686L1570 844.5L1694 818L1439 653Z"
+              fill="#DFC479"
+            />
+            <path
+              id="Vector 14"
+              d="M681.5 779.5L662 708.5L706.5 760L681.5 779.5Z"
+              fill="#92673B"
+            />
+          </g>
+          <g id="title-1">
+            <text
+              id="L E A R N"
+              fill="#222629"
+              xml:space="preserve"
+              style="white-space: pre"
+              font-family="Roboto"
+              font-size="29"
+              font-weight="bold"
+              letter-spacing="0em"
+            >
+              <tspan x="201" y="495.912">L E A R N</tspan>
+            </text>
+          </g>
+          <g id="sub-title-1">
+            <text
+              id="What are my core principles regarding money"
+              fill="#222629"
+              xml:space="preserve"
+              style="white-space: pre"
+              font-family="Roboto"
+              font-size="18"
+              letter-spacing="0em"
+            >
+              <tspan x="152.108" y="531.152">What are my core principles</tspan>
+              <tspan x="195.869" y="559.152">regarding money</tspan>
+            </text>
+          </g>
+          <g id="title-2">
+            <text
+              id="D I S C O V E R"
+              fill="#A77847"
+              xml:space="preserve"
+              style="white-space: pre"
+              font-family="Roboto"
+              font-size="29"
+              font-weight="bold"
+              letter-spacing="0em"
+            >
+              <tspan x="418" y="407.912">D I S C O V E R</tspan>
+            </text>
+          </g>
+          <g id="sub-title-2">
+            <text
+              id="What do I think about money? What are my goals?"
+              fill="#222629"
+              xml:space="preserve"
+              style="white-space: pre"
+              font-family="Roboto"
+              font-size="18"
+              letter-spacing="0em"
+            >
+              <tspan x="428.01" y="441.152">What do I think about</tspan>
+              <tspan x="401.115" y="469.152">money? What are my goals?</tspan>
+            </text>
+          </g>
+          <g id="title-3">
+            <text
+              id="P L A N"
+              fill="#DFC479"
+              xml:space="preserve"
+              style="white-space: pre"
+              font-family="Roboto"
+              font-size="29"
+              font-weight="bold"
+              letter-spacing="0em"
+            >
+              <tspan x="732" y="288.912">P L A N</tspan>
+            </text>
+          </g>
+          <g id="sub-title-3">
+            <text
+              id="What actions do I need to take?"
+              fill="#222629"
+              xml:space="preserve"
+              style="white-space: pre"
+              font-family="Roboto"
+              font-size="18"
+              letter-spacing="0em"
+            >
+              <tspan x="715.058" y="322.152">What actions do</tspan>
+              <tspan x="721.931" y="350.152">I need to take?</tspan>
+            </text>
+          </g>
+          <g id="title-4">
+            <text
+              id="S O L V E"
+              fill="#604F1F"
+              xml:space="preserve"
+              style="white-space: pre"
+              font-family="Roboto"
+              font-size="29"
+              font-weight="bold"
+              letter-spacing="0em"
+            >
+              <tspan x="969" y="223.912">S O L V E</tspan>
+            </text>
+          </g>
+          <g id="sub-title-4">
+            <text
+              id="What is my probability of success?"
+              fill="#222629"
+              xml:space="preserve"
+              style="white-space: pre"
+              font-family="Roboto"
+              font-size="18"
+              letter-spacing="0em"
+            >
+              <tspan x="939.108" y="260.152">What is my probability</tspan>
+              <tspan x="979.67" y="288.152">of success?</tspan>
+            </text>
+          </g>
+          <g id="title-5">
+            <text
+              id="M O N I T O R"
+              fill="#999C6F"
+              xml:space="preserve"
+              style="white-space: pre"
+              font-family="Roboto"
+              font-size="29"
+              font-weight="bold"
+              letter-spacing="0em"
+            >
+              <tspan x="1178" y="53.9121">M O N I T O R</tspan>
+            </text>
+          </g>
+          <g id="sub-title-5">
+            <text
+              id="How am I doing?"
+              fill="#222629"
+              xml:space="preserve"
+              style="white-space: pre"
+              font-family="Roboto"
+              font-size="18"
+              letter-spacing="0em"
+            >
+              <tspan x="1197.07" y="90.1523">How am I doing?</tspan>
+            </text>
+          </g>
+          <text
+            id="1 TIMOTHY 6:17 - 19"
+            fill="black"
+            xml:space="preserve"
+            style="white-space: pre"
+            font-family="Roboto"
+            font-size="40"
+            font-weight="bold"
+            letter-spacing="0em"
+          >
+            <tspan x="1008" y="823.172">1 TIMOTHY 6:17 - 19</tspan>
+          </text>
+        </g>
+      </svg>
+    </div>
+  </body>
+</html>
