@@ -25,8 +25,8 @@
       }
 
       .textGroup {
-        transform: scale(0);
         transition: 300ms;
+        transform: scale(0);
       }
 
       #dot-1,
@@ -34,10 +34,11 @@
       #dot-3,
       #dot-4,
       #dot-5 {
+        transition: 300ms;
         transform-box: fill-box;
         transform-origin: center;
         transform: scale(0);
-        transition: 300ms;
+        cursor: pointer;
       }
 
       #sub-title-1,
@@ -50,53 +51,67 @@
         pointer-events: none;
       }
 
+      .visible {
+        opacity: 1 !important;
+      }
+
       #title-1,
       #title-2,
       #title-3,
       #title-4,
       #title-5 {
-        opacity: 0;
         transition: 300ms;
+        opacity: 0;
         pointer-events: none;
       }
 
-      #dot-1 {
+      .animate #dot-1 {
+        transform: scale(0);
         animation: megannimationDot1 16s linear forwards;
       }
 
-      #dot-2 {
+      .animate #dot-2 {
+        transform: scale(0);
         animation: megannimationDot2 16s linear forwards;
       }
 
-      #dot-3 {
+      .animate #dot-3 {
+        transform: scale(0);
         animation: megannimationDot3 16s linear forwards;
       }
 
-      #dot-4 {
+      .animate #dot-4 {
+        transform: scale(0);
         animation: megannimationDot4 16s linear forwards;
       }
 
-      #dot-5 {
+      .animate #dot-5 {
+        transform: scale(0);
         animation: megannimationDot5 16s linear forwards;
       }
 
-      #title-1 {
+      .animate #title-1 {
+        opacity: 0;
         animation: megannimationTitle1 16s linear forwards;
       }
 
-      #title-2 {
+      .animate #title-2 {
+        opacity: 0;
         animation: megannimationTitle2 16s linear forwards;
       }
 
-      #title-3 {
+      .animate #title-3 {
+        opacity: 0;
         animation: megannimationTitle3 16s linear forwards;
       }
 
-      #title-4 {
+      .animate #title-4 {
+        opacity: 0;
         animation: megannimationTitle4 16s linear forwards;
       }
 
-      #title-5 {
+      .animate #title-5 {
+        opacity: 0;
         animation: megannimationTitle5 16s linear forwards;
       }
 
@@ -123,6 +138,10 @@
       }
 
       #linear-dot {
+        clip-path: polygon(0 0, 0% 0%, 0% 100%, 0% 100%);
+      }
+
+      .animate #linear-dot {
         clip-path: polygon(0 0, 0% 0%, 0% 100%, 0% 100%);
         animation: megannimationDashedLine 16s linear forwards;
       }
@@ -306,7 +325,8 @@
     </style>
   </head>
   <body>
-    <div class="parentDiv">
+    <div style="height: 100vh"></div>
+    <div class="parentDiv" id="main">
       <svg
         width="100%"
         min-height="0"
@@ -496,7 +516,7 @@
               fill="#92673B"
             />
           </g>
-          <g id="title-1">
+          <g id="title-1" class="title">
             <text
               id="L E A R N"
               fill="#222629"
@@ -524,7 +544,7 @@
               <tspan x="195.869" y="559.152">regarding money</tspan>
             </text>
           </g>
-          <g id="title-2">
+          <g id="title-2" class="title">
             <text
               id="D I S C O V E R"
               fill="#A77847"
@@ -552,7 +572,7 @@
               <tspan x="401.115" y="469.152">money? What are my goals?</tspan>
             </text>
           </g>
-          <g id="title-3">
+          <g id="title-3" class="title">
             <text
               id="P L A N"
               fill="#DFC479"
@@ -580,7 +600,7 @@
               <tspan x="721.931" y="350.152">I need to take?</tspan>
             </text>
           </g>
-          <g id="title-4">
+          <g id="title-4" class="title">
             <text
               id="S O L V E"
               fill="#604F1F"
@@ -608,7 +628,7 @@
               <tspan x="979.67" y="288.152">of success?</tspan>
             </text>
           </g>
-          <g id="title-5">
+          <g id="title-5" class="title">
             <text
               id="M O N I T O R"
               fill="#999C6F"
@@ -650,5 +670,39 @@
         </g>
       </svg>
     </div>
+    <div style="height: 100vh"></div>
   </body>
+  <script type="text/javascript">
+    const visibility_percentage = 0.3;
+
+    var one = document.querySelectorAll("#main");
+    let observerOne = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.intersectionRatio > visibility_percentage) {
+            document.getElementById("main").classList.add("animate");
+          } else {
+            document.getElementById("main").classList.remove("animate");
+          }
+        });
+      },
+      { threshold: visibility_percentage }
+    );
+    observerOne.observe(one[0]);
+
+    titles = ["c-top-1", "c-top-2", "c-top-3", "c-top-4", "c-top-5"];
+    titles.forEach((e) => {
+      var title = document.getElementById(e);
+      title.addEventListener("mouseover", (e) => {
+        document
+          .getElementById(`sub-title-${e.target.id.slice(-1)}`)
+          .classList.add("visible");
+      });
+      title.addEventListener("mouseout", (e) => {
+        document
+          .getElementById(`sub-title-${e.target.id.slice(-1)}`)
+          .classList.remove("visible");
+      });
+    });
+  </script>
 </html>
