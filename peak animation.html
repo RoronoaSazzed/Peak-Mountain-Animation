@@ -7,19 +7,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+
     <title>Peak Animation</title>
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
       .parentDiv {
-        min-height: 100vh;
+        min-height: 0vh;
         display: grid;
         place-items: center;
       }
@@ -37,7 +32,7 @@
         transition: 300ms;
         transform-box: fill-box;
         transform-origin: center;
-        transform: scale(0);
+        opacity: 0;
         cursor: pointer;
       }
 
@@ -66,53 +61,53 @@
       }
 
       .animate #dot-1 {
-        transform: scale(0);
-        animation: megannimationDot1 16s linear forwards;
+        opacity: 0;
+        animation: megannimationDot1 5s linear forwards;
       }
 
       .animate #dot-2 {
-        transform: scale(0);
-        animation: megannimationDot2 16s linear forwards;
+        opacity: 0;
+        animation: megannimationDot2 5s linear forwards;
       }
 
       .animate #dot-3 {
-        transform: scale(0);
-        animation: megannimationDot3 16s linear forwards;
+        opacity: 0;
+        animation: megannimationDot3 5s linear forwards;
       }
 
       .animate #dot-4 {
-        transform: scale(0);
-        animation: megannimationDot4 16s linear forwards;
+        opacity: 0;
+        animation: megannimationDot4 5s linear forwards;
       }
 
       .animate #dot-5 {
-        transform: scale(0);
-        animation: megannimationDot5 16s linear forwards;
+        opacity: 0;
+        animation: megannimationDot5 5s linear forwards;
       }
 
       .animate #title-1 {
         opacity: 0;
-        animation: megannimationTitle1 16s linear forwards;
+        animation: megannimationTitle1 5s linear forwards;
       }
 
       .animate #title-2 {
         opacity: 0;
-        animation: megannimationTitle2 16s linear forwards;
+        animation: megannimationTitle2 5s linear forwards;
       }
 
       .animate #title-3 {
         opacity: 0;
-        animation: megannimationTitle3 16s linear forwards;
+        animation: megannimationTitle3 5s linear forwards;
       }
 
       .animate #title-4 {
         opacity: 0;
-        animation: megannimationTitle4 16s linear forwards;
+        animation: megannimationTitle4 5s linear forwards;
       }
 
       .animate #title-5 {
         opacity: 0;
-        animation: megannimationTitle5 16s linear forwards;
+        animation: megannimationTitle5 5s linear forwards;
       }
 
       #c-bottom-1,
@@ -143,7 +138,7 @@
 
       .animate #linear-dot {
         clip-path: polygon(0 0, 0% 0%, 0% 100%, 0% 100%);
-        animation: megannimationDashedLine 16s linear forwards;
+        animation: megannimationDashedLine 5s linear forwards;
       }
 
       /* Dot Ball Animation */
@@ -204,60 +199,60 @@
       @keyframes megannimationDot1 {
         0%,
         10% {
-          transform: scale(0);
+          opacity: 0;
         }
 
         11%,
         100% {
-          transform: scale(1);
+          opacity: 1;
         }
       }
 
       @keyframes megannimationDot2 {
         0%,
         30% {
-          transform: scale(0);
+          opacity: 0;
         }
 
         31%,
         100% {
-          transform: scale(1);
+          opacity: 1;
         }
       }
 
       @keyframes megannimationDot3 {
         0%,
         50% {
-          transform: scale(0);
+          opacity: 0;
         }
 
         51%,
         100% {
-          transform: scale(1);
+          opacity: 1;
         }
       }
 
       @keyframes megannimationDot4 {
         0%,
         70% {
-          transform: scale(0);
+          opacity: 0;
         }
 
         71%,
         100% {
-          transform: scale(1);
+          opacity: 1;
         }
       }
 
       @keyframes megannimationDot5 {
         0%,
         90% {
-          transform: scale(0);
+          opacity: 0;
         }
 
         91%,
         100% {
-          transform: scale(1);
+          opacity: 1;
         }
       }
 
@@ -322,23 +317,90 @@
           opacity: 1;
         }
       }
+
+      #verse {
+        transition: 300ms;
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      #quote-verse:hover {
+        cursor: pointer;
+      }
+
+      #quote-verse:hover #verse {
+        opacity: 1;
+      }
     </style>
   </head>
   <body>
-    <div style="height: 100vh"></div>
     <div class="parentDiv" id="main">
       <svg
-        width="100%"
+        width="80%"
         min-height="0"
-        viewBox="0 0 1730 888"
+        viewBox="0 0 1730 1142"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
         <g id="Peak SVG">
+          <g id="quote-verse">
+            <g id="verse">
+              <text
+                id="Command those who are rich in this present world not to be arrogant nor to put their hope in wealth, which is so uncertain, but to put their hope in God, who richly provides us with everything for our enjoyment. Command them to do good, to be rich in good deeds, and to be generous and willing to share. In this way they will lay up treasure for themselves as a firm foundation for the coming age, so that they may take hold of the life that is truly life."
+                fill="#222629"
+                xml:space="preserve"
+                style="white-space: pre"
+                font-family="Roboto"
+                font-size="22"
+                font-weight="500"
+                letter-spacing="0em"
+              >
+                <tspan x="1013" y="876.52">
+                  Command those who are rich in this present world not
+                </tspan>
+                <tspan x="1013" y="902.52">
+                  to be arrogant nor to put their hope in wealth, which is
+                </tspan>
+                <tspan x="1013" y="928.52">
+                  so uncertain, but to put their hope in God, who richly
+                </tspan>
+                <tspan x="1013" y="954.52">
+                  provides us with everything for our enjoyment.
+                </tspan>
+                <tspan x="1013" y="980.52">
+                  Command them to do good, to be rich in good deeds,
+                </tspan>
+                <tspan x="1013" y="1006.52">
+                  and to be generous and willing to share. In this way
+                </tspan>
+                <tspan x="1013" y="1032.52">
+                  they will lay up treasure for themselves as a firm
+                </tspan>
+                <tspan x="1013" y="1058.52">
+                  foundation for the coming age, so that they may take
+                </tspan>
+                <tspan x="1013" y="1084.52">
+                  hold of the life that is truly life.
+                </tspan>
+              </text>
+            </g>
+            <text
+              id="1 TIMOTHY 6:17 - 19"
+              fill="black"
+              xml:space="preserve"
+              style="white-space: pre"
+              font-family="Roboto"
+              font-size="40"
+              font-weight="bold"
+              letter-spacing="0em"
+            >
+              <tspan x="1010" y="841.172">1 TIMOTHY 6:17 - 19</tspan>
+            </text>
+          </g>
           <g id="linear-dot">
             <path
               id="Vector 1"
-              d="M32 796.5L263 602L401 669L513 521L588 650L780 398.5L899 506L1028 337L1082 378.5L1264 133.5L1634 742.5L1681.5 783"
+              d="M34 814.5L265 620L403 687L515 539L590 668L782 416.5L901 524L1030 355L1084 396.5L1266 151.5L1636 760.5L1683.5 801"
               stroke="#E2E0DC"
               stroke-width="3"
               stroke-dasharray="9 9"
@@ -349,8 +411,8 @@
               <circle
                 id="Ellipse 2"
                 opacity="0.5"
-                cx="262.5"
-                cy="602.5"
+                cx="264.5"
+                cy="620.5"
                 r="25.5"
                 fill="#E2E0DC"
               />
@@ -358,11 +420,25 @@
             <g id="c-top-1">
               <circle
                 id="Ellipse 1"
-                cx="262.5"
-                cy="602.5"
+                cx="264.5"
+                cy="620.5"
                 r="18.6346"
                 fill="#222629"
               />
+            </g>
+            <g id="title-1">
+              <text
+                id="L E A R N"
+                fill="#222629"
+                xml:space="preserve"
+                style="white-space: pre"
+                font-family="Roboto"
+                font-size="29"
+                font-weight="bold"
+                letter-spacing="0em"
+              >
+                <tspan x="203" y="513.912">L E A R N</tspan>
+              </text>
             </g>
           </g>
           <g id="dot-2">
@@ -370,8 +446,8 @@
               <circle
                 id="Ellipse 2_2"
                 opacity="0.5"
-                cx="513"
-                cy="521"
+                cx="515"
+                cy="539"
                 r="26"
                 fill="#E2E0DC"
               />
@@ -379,11 +455,25 @@
             <g id="c-top-2">
               <circle
                 id="Ellipse 1_2"
-                cx="513"
-                cy="521"
+                cx="515"
+                cy="539"
                 r="19"
                 fill="#A77847"
               />
+            </g>
+            <g id="title-2">
+              <text
+                id="D I S C O V E R"
+                fill="#A77847"
+                xml:space="preserve"
+                style="white-space: pre"
+                font-family="Roboto"
+                font-size="29"
+                font-weight="bold"
+                letter-spacing="0em"
+              >
+                <tspan x="420" y="425.912">D I S C O V E R</tspan>
+              </text>
             </g>
           </g>
           <g id="dot-3">
@@ -391,8 +481,8 @@
               <circle
                 id="Ellipse 2_3"
                 opacity="0.5"
-                cx="780.5"
-                cy="399.5"
+                cx="782.5"
+                cy="417.5"
                 r="25.5"
                 fill="#E2E0DC"
               />
@@ -400,11 +490,25 @@
             <g id="c-top-3">
               <circle
                 id="Ellipse 1_3"
-                cx="780.5"
-                cy="399.5"
+                cx="782.5"
+                cy="417.5"
                 r="18.6346"
                 fill="#DFC479"
               />
+            </g>
+            <g id="title-3">
+              <text
+                id="P L A N"
+                fill="#DFC479"
+                xml:space="preserve"
+                style="white-space: pre"
+                font-family="Roboto"
+                font-size="29"
+                font-weight="bold"
+                letter-spacing="0em"
+              >
+                <tspan x="734" y="306.912">P L A N</tspan>
+              </text>
             </g>
           </g>
           <g id="dot-4">
@@ -412,8 +516,8 @@
               <circle
                 id="Ellipse 2_4"
                 opacity="0.5"
-                cx="1027.5"
-                cy="336.5"
+                cx="1029.5"
+                cy="354.5"
                 r="25.5"
                 fill="#E2E0DC"
               />
@@ -421,11 +525,25 @@
             <g id="c-top-4">
               <circle
                 id="Ellipse 1_4"
-                cx="1027.5"
-                cy="336.5"
+                cx="1029.5"
+                cy="354.5"
                 r="18.6346"
                 fill="#604F1F"
               />
+            </g>
+            <g id="title-4">
+              <text
+                id="S O L V E"
+                fill="#604F1F"
+                xml:space="preserve"
+                style="white-space: pre"
+                font-family="Roboto"
+                font-size="29"
+                font-weight="bold"
+                letter-spacing="0em"
+              >
+                <tspan x="971" y="241.912">S O L V E</tspan>
+              </text>
             </g>
           </g>
           <g id="dot-5">
@@ -433,8 +551,8 @@
               <circle
                 id="Ellipse 2_5"
                 opacity="0.5"
-                cx="1264.5"
-                cy="133.5"
+                cx="1266.5"
+                cy="151.5"
                 r="25.5"
                 fill="#E2E0DC"
               />
@@ -442,93 +560,93 @@
             <g id="c-top-5">
               <circle
                 id="Ellipse 1_5"
-                cx="1264.5"
-                cy="133.5"
+                cx="1266.5"
+                cy="151.5"
                 r="18.6346"
                 fill="#999C6F"
               />
+            </g>
+            <g id="title-5">
+              <text
+                id="M O N I T O R"
+                fill="#999C6F"
+                xml:space="preserve"
+                style="white-space: pre"
+                font-family="Roboto"
+                font-size="29"
+                font-weight="bold"
+                letter-spacing="0em"
+              >
+                <tspan x="1180" y="71.9121">M O N I T O R</tspan>
+              </text>
             </g>
           </g>
           <g id="mountain">
             <path
               id="Vector 2"
-              d="M263 656L34 848.5L263 821L410.5 860L512.5 775.5L588 853L706.5 760L662.5 708L617.5 764L512.5 581.5L410.5 721.5L263 656Z"
+              d="M265 674L36 866.5L265 839L412.5 878L514.5 793.5L590 871L708.5 778L664.5 726L619.5 782L514.5 599.5L412.5 739.5L265 674Z"
               fill="#A77847"
             />
             <path
               id="Vector 4"
-              d="M368 778L263 656L410 722L368 778Z"
+              d="M370 796L265 674L412 740L370 796Z"
               fill="#92673B"
             />
             <path
               id="Vector 3"
-              d="M568.5 825L512.5 582L618 764.5L568.5 825Z"
+              d="M570.5 843L514.5 600L620 782.5L570.5 843Z"
               fill="#92673B"
             />
             <path
               id="Vector 5"
-              d="M781 461L588 712.5L617 765.5L662 709L706 760.5L780.5 701.5L903 769L1028 664L1081.5 688.5L1264 541.5L1411 686L1441 654L1610 763L1264 197L1080 439L1028 398L899 569L781 461Z"
+              d="M783 479L590 730.5L619 783.5L664 727L708 778.5L782.5 719.5L905 787L1030 682L1083.5 706.5L1266 559.5L1413 704L1443 672L1612 781L1266 215L1082 457L1030 416L901 587L783 479Z"
               fill="#999C6F"
             />
             <path
               id="Vector 6"
-              d="M830 660L780.5 460L900 568L830 660Z"
+              d="M832 678L782.5 478L902 586L832 678Z"
               fill="#878A5C"
             />
             <path
               id="Vector 7"
-              d="M1061.5 473L1028 398L1081.5 439.5L1061.5 473Z"
+              d="M1063.5 491L1030 416L1083.5 457.5L1063.5 491Z"
               fill="#878A5D"
             />
             <path
               id="Vector 8"
-              d="M830.5 660.5L1027.5 398.5L1061 473.5L830.5 660.5Z"
+              d="M832.5 678.5L1029.5 416.5L1063 491.5L832.5 678.5Z"
               fill="#939669"
             />
             <path
               id="Vector 9"
-              d="M1038.5 669L1263.5 196L1252 552L1236 565L1196.5 519.5L1114 662.5L1081 689L1038.5 669Z"
+              d="M1040.5 687L1265.5 214L1254 570L1238 583L1198.5 537.5L1116 680.5L1083 707L1040.5 687Z"
               fill="#878A5C"
             />
             <path
               id="Vector 10"
-              d="M1439 652.5L1265 196L1252 552L1265 542L1410.5 686.5L1439 652.5Z"
+              d="M1441 670.5L1267 214L1254 570L1267 560L1412.5 704.5L1441 670.5Z"
               fill="#7C7F52"
             />
             <path
               id="Vector 11"
-              d="M1610 763L1265 195L1439 652L1610 763Z"
+              d="M1612 781L1267 213L1441 670L1612 781Z"
               fill="#777A4D"
             />
             <path
               id="Vector 12"
-              d="M1114.5 662L1196.5 519L1236 565L1114.5 662Z"
+              d="M1116.5 680L1198.5 537L1238 583L1116.5 680Z"
               fill="#DFC479"
             />
             <path
               id="Vector 13"
-              d="M1439 653L1410.5 686L1570 844.5L1694 818L1439 653Z"
+              d="M1441 671L1412.5 704L1572 862.5L1696 836L1441 671Z"
               fill="#DFC479"
             />
             <path
               id="Vector 14"
-              d="M681.5 779.5L662 708.5L706.5 760L681.5 779.5Z"
+              d="M683.5 797.5L664 726.5L708.5 778L683.5 797.5Z"
               fill="#92673B"
             />
-          </g>
-          <g id="title-1" class="title">
-            <text
-              id="L E A R N"
-              fill="#222629"
-              xml:space="preserve"
-              style="white-space: pre"
-              font-family="Roboto"
-              font-size="29"
-              font-weight="bold"
-              letter-spacing="0em"
-            >
-              <tspan x="201" y="495.912">L E A R N</tspan>
-            </text>
           </g>
           <g id="sub-title-1">
             <text
@@ -540,22 +658,8 @@
               font-size="18"
               letter-spacing="0em"
             >
-              <tspan x="152.108" y="531.152">What are my core principles</tspan>
-              <tspan x="195.869" y="559.152">regarding money</tspan>
-            </text>
-          </g>
-          <g id="title-2" class="title">
-            <text
-              id="D I S C O V E R"
-              fill="#A77847"
-              xml:space="preserve"
-              style="white-space: pre"
-              font-family="Roboto"
-              font-size="29"
-              font-weight="bold"
-              letter-spacing="0em"
-            >
-              <tspan x="418" y="407.912">D I S C O V E R</tspan>
+              <tspan x="154.108" y="549.152">What are my core principles</tspan>
+              <tspan x="197.869" y="577.152">regarding money</tspan>
             </text>
           </g>
           <g id="sub-title-2">
@@ -568,22 +672,8 @@
               font-size="18"
               letter-spacing="0em"
             >
-              <tspan x="428.01" y="441.152">What do I think about</tspan>
-              <tspan x="401.115" y="469.152">money? What are my goals?</tspan>
-            </text>
-          </g>
-          <g id="title-3" class="title">
-            <text
-              id="P L A N"
-              fill="#DFC479"
-              xml:space="preserve"
-              style="white-space: pre"
-              font-family="Roboto"
-              font-size="29"
-              font-weight="bold"
-              letter-spacing="0em"
-            >
-              <tspan x="732" y="288.912">P L A N</tspan>
+              <tspan x="430.01" y="459.152">What do I think about</tspan>
+              <tspan x="403.115" y="487.152">money? What are my goals?</tspan>
             </text>
           </g>
           <g id="sub-title-3">
@@ -596,22 +686,8 @@
               font-size="18"
               letter-spacing="0em"
             >
-              <tspan x="715.058" y="322.152">What actions do</tspan>
-              <tspan x="721.931" y="350.152">I need to take?</tspan>
-            </text>
-          </g>
-          <g id="title-4" class="title">
-            <text
-              id="S O L V E"
-              fill="#604F1F"
-              xml:space="preserve"
-              style="white-space: pre"
-              font-family="Roboto"
-              font-size="29"
-              font-weight="bold"
-              letter-spacing="0em"
-            >
-              <tspan x="969" y="223.912">S O L V E</tspan>
+              <tspan x="717.058" y="340.152">What actions do</tspan>
+              <tspan x="723.931" y="368.152">I need to take?</tspan>
             </text>
           </g>
           <g id="sub-title-4">
@@ -624,22 +700,8 @@
               font-size="18"
               letter-spacing="0em"
             >
-              <tspan x="939.108" y="260.152">What is my probability</tspan>
-              <tspan x="979.67" y="288.152">of success?</tspan>
-            </text>
-          </g>
-          <g id="title-5" class="title">
-            <text
-              id="M O N I T O R"
-              fill="#999C6F"
-              xml:space="preserve"
-              style="white-space: pre"
-              font-family="Roboto"
-              font-size="29"
-              font-weight="bold"
-              letter-spacing="0em"
-            >
-              <tspan x="1178" y="53.9121">M O N I T O R</tspan>
+              <tspan x="941.108" y="278.152">What is my probability</tspan>
+              <tspan x="981.67" y="306.152">of success?</tspan>
             </text>
           </g>
           <g id="sub-title-5">
@@ -652,25 +714,12 @@
               font-size="18"
               letter-spacing="0em"
             >
-              <tspan x="1197.07" y="90.1523">How am I doing?</tspan>
+              <tspan x="1199.07" y="108.152">How am I doing?</tspan>
             </text>
           </g>
-          <text
-            id="1 TIMOTHY 6:17 - 19"
-            fill="black"
-            xml:space="preserve"
-            style="white-space: pre"
-            font-family="Roboto"
-            font-size="40"
-            font-weight="bold"
-            letter-spacing="0em"
-          >
-            <tspan x="1008" y="823.172">1 TIMOTHY 6:17 - 19</tspan>
-          </text>
         </g>
       </svg>
     </div>
-    <div style="height: 100vh"></div>
   </body>
   <script type="text/javascript">
     const visibility_percentage = 0.3;
